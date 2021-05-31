@@ -561,11 +561,11 @@ body {
 .integrations {
   height: 685px;
   background-color: #0A2540;
+  padding-top: 150px;
 }
 .integrations__content {
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
 }
 .integrations__left-side {
   margin-right: 120px;
