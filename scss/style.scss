@@ -834,8 +834,7 @@ body {
         padding: 0 10px;
     }
 
-    &__img-container-1 {
-        background-image: url(../img/home/blog-img-1.jpg);
+    &__img-container {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -843,13 +842,13 @@ body {
         width: 100%;
     }
 
+    &__img-container-1 {
+        background-image: url(../img/Home/blog-img-1.jpg);
+
+    }
+
     &__img-container-2 {
-        background-image: url(../img/home/blog-img-2.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        min-height: 300px;
-        width: 100%;
+        background-image: url(../img/Home/blog-img-2.jpg);
     }
 
     &__main-info {

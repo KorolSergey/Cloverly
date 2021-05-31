@@ -804,21 +804,18 @@ body {
   height: 600px;
   padding: 0 10px;
 }
-.blog-section__img-container-1 {
-  background-image: url(../img/home/blog-img-1.jpg);
+.blog-section__img-container {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 300px;
   width: 100%;
 }
+.blog-section__img-container-1 {
+  background-image: url(../img/Home/blog-img-1.jpg);
+}
 .blog-section__img-container-2 {
-  background-image: url(../img/home/blog-img-2.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 300px;
-  width: 100%;
+  background-image: url(../img/Home/blog-img-2.jpg);
 }
 .blog-section__main-info {
   background-color: #fff;
