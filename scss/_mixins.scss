@@ -2,6 +2,8 @@
     font-size: 18px;
     line-height: 24px;
     color: #00CA90;
+    display: inline-block;
+
 }
 
 @mixin title {
@@ -24,4 +26,15 @@
     border-radius: 50px;
     outline: none;
     cursor: pointer;
+}
+
+@mixin hide-block {
+    transform: translate(0px, 80%);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+@mixin show-block {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }

@@ -163,11 +163,24 @@ body {
     background: rgba(255, 255, 255, 0.25);
     padding: 6px 15px 11px 15px;
 
+    transform: translate(0px, 80%);
+    opacity: 0;
+    transition: 0.8s;
+
     &__text {
         font-size: 15px;
         line-height: 15px;
         color: white;
+
+        /* transform: translate(80%, 0px);
+        opacity: 0;
+        transition: 0.8s; */
     }
+}
+
+.intro-message._show-title {
+    transform: translate(0px, 0px);
+    opacity: 1;
 }
 
 .intro-title {
@@ -179,6 +192,16 @@ body {
     color: white;
     font-size: 58px;
     line-height: 80px;
+
+    transform: translate(0px, 80%);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.intro-title._show-title {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.4s;
 }
 
 .intro-description {
@@ -190,6 +213,16 @@ body {
     font-size: 18px;
     line-height: 26px;
     color: white;
+
+    transform: translate(0px, 80%);
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.intro-description._show-title {
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.8s;
 }
 
 .intro-buttons {
@@ -212,9 +245,19 @@ body {
         margin-right: 10px;
         transition: 0.3s;
 
+        transform: translate(-10%, 80%);
+        opacity: 0;
+        transition: 0.8s;
+
         &:hover {
             color: #1FBD8A;
         }
+    }
+
+    &__getstart._show-title {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all 0.8s ease 1.2s;
     }
 
     &__lettalk {
@@ -222,9 +265,19 @@ body {
         background-color: #192F44;
         transition: 0.3s;
 
+        transform: translate(10%, 80%);
+        opacity: 0;
+        transition: 0.8s;
+
         &:hover {
             background-color: #01596D;
         }
+    }
+
+    &__lettalk._show-title {
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all 0.8s ease 1.2s;
     }
 }
 
@@ -320,11 +373,21 @@ body {
 
     &__pretitle {
         @include pretitle;
+        @include hide-block;
+    }
 
+    &__pretitle._show-title {
+        transform: translate(0px, 0px);
+        opacity: 1;
     }
 
     &__title {
         @include title;
+        @include hide-block;
+    }
+
+    &__title._show-title {
+        @include show-block;
     }
 
     &__description {
@@ -332,6 +395,13 @@ body {
         margin: 13px auto;
         width: 846px;
         height: 78px;
+
+        @include hide-block;
+    }
+
+    &__description._show-title {
+        @include show-block;
+        transition: all 0.8s ease 0.4s;
     }
 
     &__header-buttons {
@@ -461,10 +531,21 @@ body {
 
     &__pretitle {
         @include pretitle;
+        @include hide-block;
+    }
+
+    &__pretitle._show-title {
+        @include show-block;
     }
 
     &__title {
         @include title;
+        @include hide-block;
+    }
+
+    &__title._show-title {
+        @include show-block;
+        transition: all 0.8s ease 0.4s
     }
 
     &__description {
@@ -472,6 +553,13 @@ body {
         width: 872px;
         height: 78px;
         margin: 11px auto;
+
+        @include hide-block;
+    }
+
+    &__description._show-title {
+        @include show-block;
+        transition: all 0.8s ease 0.8s
     }
 
     &__body {
@@ -488,6 +576,18 @@ body {
         display: flex;
         width: 50%;
         margin-bottom: 70px;
+
+        transform: rotate(20deg);
+        opacity: 0;
+        transition: 0.8s;
+        // @include hide-block;
+    }
+
+    &__row-item._show-title {
+        transform: rotate(0deg);
+        opacity: 1;
+        transition: all 0.8s ease 1s;
+        // @include show-block;
     }
 
     &__row-img {
@@ -570,6 +670,8 @@ body {
     height: 685px;
     background-color: #0A2540;
     padding-top: 150px;
+    overflow: hidden;
+
 
     &__content {
         display: flex;
@@ -578,6 +680,16 @@ body {
 
     &__left-side {
         margin-right: 120px;
+
+        transform: translate(-100%, 0px);
+        opacity: 0;
+        transition: 0.8s;
+    }
+
+    &__left-side._show-title {
+        @include show-block;
+        transition: all 0.8s ease 1s;
+
     }
 
     &__pretitle {
@@ -635,6 +747,15 @@ body {
         border-radius: 14px;
         box-shadow: 0 30px 50px rgb(6 23 9 / 35%);
         overflow: hidden;
+
+        transform: translate(100%, 0px);
+        opacity: 0;
+        transition: 0.8s;
+    }
+
+    &__right-side._show-title {
+        @include show-block;
+        transition: all 0.8s ease 1s;
     }
 }
 
@@ -759,6 +880,8 @@ body {
     padding: 74px 0 74px 70px;
     position: relative;
 
+    @include hide-block;
+
 
     &::after {
         content: '';
@@ -805,6 +928,10 @@ body {
     }
 }
 
+.try-section._show-title {
+    @include show-block;
+}
+
 .blog-section {
     margin-top: 150px;
 
@@ -844,7 +971,6 @@ body {
 
     &__img-container-1 {
         background-image: url(../img/Home/blog-img-1.jpg);
-
     }
 
     &__img-container-2 {
